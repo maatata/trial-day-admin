@@ -1,0 +1,15 @@
+Run the following commands:
+
+
+mkdir /var/admintasks
+echo '#!/bin/bash \nprintf "Hello World" > /var/admintasks/hello_world.txt' > /var/admintasks/task1.sh
+chmod u+x,g+x,o+x /var/admintasks/task1.sh
+
+
+Then to add it to crontab we need to do the following:
+
+crontab -e
+
+add the following line to the end of crontab and save it
+
+*/5 * * * * /var/admintasks/task1.sh
