@@ -1,0 +1,6 @@
+Run the follwoing commands:
+
+touch test.txt
+
+chow root:devuser test.txt
+chmod u+rw,u-x,g+rw,g-x,o-rwx test.txt
